@@ -1,19 +1,16 @@
 import CommonCardHeader from "@/CommonComponents/CommonCardHeader";
 import { MultipleImageVideoAudioUpload } from "@/Constant";
-import { DropzoneType } from "@/Type/BonusUi";
-import Dropzone from "react-dropzone-uploader";
 import { Card, CardBody, Col, Form } from "reactstrap";
+import CommonFileUpload from "../Common/CommonFileUpload";
 
-const MultiVideoImageAudioUpload = (props: DropzoneType) => {
+const MultiVideoImageAudioUpload = () => {
   return (
     <Col sm="12">
       <Card>
         <CommonCardHeader heading={MultipleImageVideoAudioUpload} />
         <CardBody>
           <Form>
-            <div className="dz-message needsclick">
-              <Dropzone getUploadParams={props.getUploadParams} onChangeStatus={props.handleChangeStatus} onSubmit={props.handleSubmit} accept="image/*,audio/*,video/*" />
-            </div>
+            <CommonFileUpload multiple />
           </Form>
         </CardBody>
       </Card>

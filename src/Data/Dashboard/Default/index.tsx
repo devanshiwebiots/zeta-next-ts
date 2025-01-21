@@ -358,19 +358,6 @@ export const OnGoingData = [
 
 export const OngoingTableData = ["Name", "Date", "Project", "Status"];
 
-// export const TotalTransactionsChart = {
-//   series: [
-//     {
-//       name: "Males",
-//       data: [0, 20, 40, 60, 90, 70, 45, 30],
-//     },
-//     {
-//       name: "Females",
-//       data: [0, -20, -40, -60, -90, -70, -45, -30],
-//     },
-//   ],
-// };
-
 export const TotalTransactionsOptions: ApexOptions = {
   series: [{
       name: 'Males',

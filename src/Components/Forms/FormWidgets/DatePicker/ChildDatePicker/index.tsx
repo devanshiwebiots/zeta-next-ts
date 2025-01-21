@@ -1,12 +1,12 @@
 import { DateRange, MaxDate, MinDate, SpecificDateRange } from "@/Constant";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import DatePicker from "react-datepicker";
 import { Col, FormGroup, Label, Row } from "reactstrap";
 
 const ChildDatepicker = () => {
   const [startDate, setStartDate] = useState<any>(new Date());
   const endDate = new Date();
-  const handleChange = (date: Date) => {
+  const handleChange = (date: SetStateAction<Date | null>) => {
     setStartDate(date);
   };
 

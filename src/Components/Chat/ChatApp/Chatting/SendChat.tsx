@@ -2,8 +2,7 @@ import { ImagePath, Send } from "@/Constant";
 import { RootState } from "@/Redux/ReduxStore";
 import { replyByUserAsync, sendMessageAsync } from "@/Redux/Slices/ChatSlice";
 import { ChatEmojiType } from "@/Type/ChatApp";
-import data from "@emoji-mart/data";
-// import Picker from "@emoji-mart/react";
+import EmojiPicker from "emoji-picker-react";
 import Image from "next/image";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,14 +43,7 @@ const SendChat = () => {
     <div className="chat-message clearfix">
       <Row>
         <div>
-          {/* {showEmojiPicker ? (
-            <Picker
-              data={data}
-              onEmojiSelect={(e: ChatEmojiType) => {
-                addEmoji(e.native);
-              }}
-            />
-          ) : null} */}
+        {showEmojiPicker ? <EmojiPicker onEmojiClick={({ emoji }) => addEmoji(emoji)} /> : null}
         </div>
         <Col xl="12" className="d-flex">
           <div className="smiley-box bg-primary">

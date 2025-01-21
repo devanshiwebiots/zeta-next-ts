@@ -1,11 +1,16 @@
 import ConfigDB from "@/Config/ThemeConfig";
 import { Cancel, Configuration, CopyText } from "@/Constant";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
 import { Button, Container, Modal, ModalBody, ModalFooter, ModalHeader, Row } from "reactstrap";
 
 const ConfigurationFile = ({ toggle, modal }: any) => {
   const configDB = ConfigDB.data;
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(JSON.stringify(configDB));
+    toast.success("Code Copied to clipboard !", { position: "bottom-right", theme: "colored" });
+  };
+
   return (
     <Modal isOpen={modal} toggle={toggle} className="modal-body" centered={true}>
       <ModalHeader toggle={toggle}>{Configuration}</ModalHeader>
@@ -61,19 +66,13 @@ const ConfigurationFile = ({ toggle, modal }: any) => {
         </Container>
       </ModalBody>
       <ModalFooter>
-        <CopyToClipboard text={JSON.stringify(configDB)}>
           <Button
             color="primary"
             className="notification"
-            onClick={() =>
-              toast.success("Code Copied to clipboard !", {
-                position: toast.POSITION.BOTTOM_RIGHT,
-              })
-            }
+            onClick={handleCopy}
           >
             {CopyText}
           </Button>
-        </CopyToClipboard>
         <Button color="secondary" onClick={toggle}>
           {Cancel}
         </Button>

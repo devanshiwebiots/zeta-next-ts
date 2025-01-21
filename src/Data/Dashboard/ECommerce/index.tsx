@@ -22,7 +22,6 @@ export const SalesChartOptions: ApexOptions = {
     },
     dropShadow: {
       enabled: true,
-      // bottom: 2,
       left: 10,
       blur: 6,
       color: "#000",
@@ -93,7 +92,6 @@ export const InvoiceChartOptions: ApexOptions = {
     bar: {
       horizontal: false,
       columnWidth: "20%",
-      // endingShape: "rounded",
     },
   },
   dataLabels: {
@@ -112,7 +110,6 @@ export const InvoiceChartOptions: ApexOptions = {
     hover: {
       filter: {
         type: "darken",
-        value: 1,
       },
     },
   },
@@ -303,7 +300,6 @@ export const RevenueByCategoryChartOptions: ApexOptions = {
     hover: {
       filter: {
         type: "darken",
-        value: 1,
       },
     },
   },

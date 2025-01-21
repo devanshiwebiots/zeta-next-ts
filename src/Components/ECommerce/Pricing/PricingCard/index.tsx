@@ -25,11 +25,11 @@ const PricingCards = () => {
                     </div>
                     <div className="pricing-list">
                       <ul className="simple-list pricing-inner">
-                        {item.storage.map((storage, i) => (
-                          <li>
-                            <h6 key={i}>
+                        {item.storage.map((storage, index) => (
+                          <li key={index}>
+                            <h6>
                               {storage[0]}
-                              <span key={i}>{storage[1]}</span>
+                              <span>{storage[1]}</span>
                             </h6>
                           </li>
                         ))}

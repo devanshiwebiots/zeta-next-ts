@@ -7,14 +7,14 @@ export interface CommonCardFooterProps {
 }
 
 export interface DatePickerInterFace {
-  startDate?: Date;
-  handleChange: (data: Date) => void;
+  startDate?: any;
+  handleChange: (data: SetStateAction<Date | null>) => void;
 }
 
 export interface FormWidgetsDatePickerProps {
   startDate: Date | null;
   setStartDate?: Date | null;
-  handleChange: (date: Date) => void;
+  handleChange: (date: SetStateAction<Date | null>) => void;
 }
 
 export interface CommonTouchspinProps {
@@ -42,9 +42,9 @@ export interface PredefinedRangesProps {
   handleChange: (date: string) => void;
 }
 
-export interface SingleDatePicker {
-  startDate1: Date;
-  handleChange: (date: Date) => void;
+export interface SingleDatePickerProp {
+  startDate1: any;
+  handleChange: (date: SetStateAction<Date | null>) => void;
 }
 
 export interface CommonFormGroupProps {

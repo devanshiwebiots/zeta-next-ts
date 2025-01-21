@@ -185,7 +185,6 @@ export const SidebarMenu: SidebarMenuInterFace[] = [
             pathSlice: "formwidget",
             items: [
               { title: "Date picker", type: "link", path: `/forms/formwidget/datepicker` },
-              // { title: 'Time picker', type: 'link', path: `/forms/formwidget/timepicker` },
               { title: "Typeahead", type: "link", path: `/forms/formwidget/typeahead` },
               { title: "Date Time Picker", type: "link", path: `/forms/formwidget/datetimepicker` },
               { title: "Date Rangepicker", type: "link", path: `/forms/formwidget/rangepicker` },
@@ -319,7 +318,6 @@ export const SidebarMenu: SidebarMenuInterFace[] = [
           { path: `/bonusui/card/basiccards`, title: "Basic Card ", type: "link" },
           { path: `/bonusui/card/creativecards`, title: "Creative Card ", type: "link" },
           { path: `/bonusui/card/tabcards`, title: "Tabbed Card ", type: "link" },
-          // { path: `/bonusui/card/draggingCards`, title: "Draggable Card", type: "link" },
           { path: `/bonusui/timeline`, title: "Timeline", type: "link" },
         ],
       },

@@ -2,15 +2,23 @@ import CommonBreadcrumb from "@/CommonComponents/CommonBreadcrumb";
 import { CKEditorExample } from "@/Constant";
 import { CKEditorParagraph } from "@/Data/Editor";
 import { useState } from "react";
-import CKEditors from "react-ckeditor-component";
-import { Card, CardBody, CardHeader, Col, Container, Row } from "reactstrap";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  Container,
+  Row,
+} from "reactstrap";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
-const CKEditor = () => {
-  const [content, setContent] = useState("content");
-  const onChange = (evt: any) => {
-    const newContent = evt.editor.getData();
-    setContent(newContent);
-  };
+const CKEditors = () => {
+  const content = `Launched by a Saturn V rocket from Kennedy Space Center in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of NASA's Apollo program. The Apollo spacecraft had three parts: Command Module with a cabin for the three astronauts which was the only part which landed back on Earth Service Module which supported the Command Module with propulsion, electrical power, oxygen and water Lunar for on the Moon. After being sent to the Moon by the Saturn V's upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the Sea of Tranquility. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the Pacific Ocean on July 24. <br/><br/><br/><br/><br/>`;
+  const LoremText: string = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate urna, sed dignissim arcu. Aliquam at ligula imperdiet, faucibus ante a, interdum enim. Sed in mauris a lectus lobortis condimentum. Sed in nunc magna. Quisque massa urna, cursus vitae commodo eget, rhoncus nec erat. Sed sapien turpis, elementum sit amet elit vitae, elementum gravida eros. In ornare tempus nibh ut lobortis. Nam venenatis justo ex, vitae vulputate neque laoreet a.`;
+  const [editing, setEditing] = useState(false);
+  const showEditor = () => setEditing(!editing);
   return (
     <>
       <CommonBreadcrumb pageTitle="CK Editor" parent="Editor" />
@@ -22,13 +30,7 @@ const CKEditor = () => {
                 <h5>{CKEditorExample}</h5>
               </CardHeader>
               <CardBody>
-                <CKEditors
-                  activeClassName="p10"
-                  content={content}
-                  events={{
-                    change: onChange,
-                  }}
-                />
+                <CKEditor editor={ClassicEditor} data={content} />
               </CardBody>
             </Card>
           </Col>
@@ -40,10 +42,21 @@ const CKEditor = () => {
                 <h5>Inline Editor</h5>
               </CardHeader>
               <CardBody>
-                <div id="area1">
-                  <h1>Your title</h1>
-                  <p>{CKEditorParagraph}</p>
-                </div>
+                {editing ? (
+                  <>
+                    <CKEditor editor={ClassicEditor} data={LoremText} />
+                    <Button
+                      color="light"
+                      className="mt-2"
+                      onClick={() => setEditing(false)}
+                    >{`Hide`}</Button>
+                  </>
+                ) : (
+                  <div onClick={showEditor}>
+                    <h1>our title</h1>
+                    <p>{CKEditorParagraph}</p>
+                  </div>
+                )}
               </CardBody>
             </Card>
           </Col>
@@ -53,4 +66,4 @@ const CKEditor = () => {
   );
 };
 
-export default CKEditor;
+export default CKEditors;

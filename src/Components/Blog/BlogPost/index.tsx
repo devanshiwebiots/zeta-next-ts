@@ -11,7 +11,6 @@ const BlogPost = () => {
       <CommonBreadcrumb parent="Blog" pageTitle="Blog Post" />
       <Container fluid>
         <Row>
-          <Form suppressHydrationWarning className=" needs-validation">
             <Col sm="12">
               <Card>
                 <CommonCardHeader heading="Post Edit" />
@@ -21,7 +20,6 @@ const BlogPost = () => {
                 </CardBody>
               </Card>
             </Col>
-          </Form>
         </Row>
       </Container>
     </>

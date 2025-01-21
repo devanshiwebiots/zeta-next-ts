@@ -9,25 +9,25 @@ const AutoCloseNotify = () => {
     switch (toastname) {
       case "autoclose1Toast":
         toast.success("Success Notification !", {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "top-right",
           autoClose: 15000,
         });
         break;
       case "autoclose2Toast":
         toast.info("Info Notification !", {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "top-right",
           autoClose: 5000,
         });
         break;
       case "autoclose3Toast":
         toast.warn("Warning Notification !", {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "top-right",
           autoClose: 1000,
         });
         break;
       case "autoclose4Toast":
         toast.error("Danger Notification !", {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "top-right",
           autoClose: 500,
         });
         break;

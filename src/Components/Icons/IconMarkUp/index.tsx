@@ -1,5 +1,4 @@
 //@ts-nocheck
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 import { Button, Container, FormGroup, Input, Label, Row } from "reactstrap";
 
@@ -12,6 +11,11 @@ const IconMarkUp = ({ iTag, icons }) => {
   if (iTag !== "" && icons !== "") {
     document.getElementsByClassName("icon-hover-bottom")[0].style.display = "block";
   }
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(iTag.iTag);
+    toast.success("Code Copied to clipboard !", { position: "bottom-right", theme: "colored" });
+  };
 
   return (
     <div className="icon-hover-bottom p-fixed fa-fa-icon-show-div">
@@ -41,19 +45,13 @@ const IconMarkUp = ({ iTag, icons }) => {
               <div className="form-inline">
                 <FormGroup className="mb-0">
                   <Input type="text" className="inp-val m-r-10" defaultValue={iTag.iTag} id="input_copy" />
-                  <CopyToClipboard text={iTag.iTag}>
                     <Button
                       color="primary"
                       className="notification"
-                      onClick={() =>
-                        toast.success("Code Copied to clipboard !", {
-                          position: toast.POSITION.BOTTOM_RIGHT,
-                        })
-                      }
+                     onClick={handleCopy}
                     >
                       Copy text
                     </Button>
-                  </CopyToClipboard>
                 </FormGroup>
               </div>
             </div>

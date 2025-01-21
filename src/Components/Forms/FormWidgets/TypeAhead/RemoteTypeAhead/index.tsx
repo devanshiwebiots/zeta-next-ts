@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { Button, ButtonToolbar, Card, CardBody, Col, Form, FormGroup } from "reactstrap";
 
 const RemoteTypeahead = () => {
-  const ref = useRef<HTMLInputElement |any>();
+  const ref = useRef<HTMLInputElement |any>(null);
   const typeAheadData = useAppSelector((store) => store.typeAheadSlice.data);
   const dispatch = useDispatch();
 

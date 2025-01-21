@@ -4,7 +4,6 @@ import DataTable from "react-data-table-component";
 import { Button, Card, CardBody, Col } from "reactstrap";
 import { AddNewRow, AddRowsHeading } from "@/Constant";
 import { AddRowsSubHeading, AddRowsTableColumns, AddRowsTableData } from "@/Data/Table/DataTable";
-import dynamic from "next/dynamic";
 
 const AddRows = () => {
   const [tableData, setTableData] = useState(AddRowsTableData);
@@ -45,5 +44,3 @@ const AddRows = () => {
 };
 
 export default AddRows;
-
-//import DataTable from "react-data-table-component";

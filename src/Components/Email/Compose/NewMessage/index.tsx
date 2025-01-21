@@ -1,14 +1,10 @@
-import CKEditor from "react-ckeditor-component";
-import Dropzone from "react-dropzone-uploader";
 import { Button, Card, Form, FormGroup, Input, Label } from "reactstrap";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import CommonFileUpload from "@/Components/BonusUi/Dropzone/Common/CommonFileUpload";
 
 const NewMessage = () => {
-  const getUploadParams = () => {
-    return {
-      url: "https://httpbin.org/post",
-    };
-  };
-  const handleChangeStatus = () => {};
+
   return (
     <div className="email-right-aside">
       <Card className="email-body">
@@ -35,10 +31,10 @@ const NewMessage = () => {
                   </FormGroup>
                   <FormGroup>
                     <Label className="col-form-label pt-0">Messages</Label>
-                    <CKEditor activeClassName="p10" />
+                    <CKEditor editor={ClassicEditor} />
                   </FormGroup>
                   <FormGroup className="dropzone digits text-center">
-                    <Dropzone getUploadParams={getUploadParams} onChangeStatus={handleChangeStatus} maxFiles={1} multiple={false} canCancel={false} inputContent="Drop files here or click to upload." />
+                    <CommonFileUpload />
                   </FormGroup>
                 </Form>
                 <div className="action-wrapper">

@@ -3,7 +3,7 @@ import CommonCardHeader from "@/CommonComponents/CommonCardHeader";
 import { DatePickers } from "@/Constant";
 import { Card, CardBody, Col, Container, Form, Row } from "reactstrap";
 import DefaultDate from "./DefaultDate";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import DateWithTime from "./DateWithTime";
 import TimeOnly from "./TimeOnly";
 import CustomDate from "./CustomDate";
@@ -14,8 +14,8 @@ import DisableDatePicker from "./DisableDatePicker";
 import InlineDate from "./InlineDate";
 
 const DatePicker = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  const handleChange = (date: Date) => {
+  const [startDate, setStartDate] = useState<any>(new Date());
+  const handleChange = (date: SetStateAction<Date | null>) => {
     setStartDate(date);
   };
   return (

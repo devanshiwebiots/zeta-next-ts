@@ -1,9 +1,9 @@
-import { SingleDatePicker } from "@/Type/Form";
+import { SingleDatePickerProp} from "@/Type/Form";
 import DatePicker from "react-datepicker";
 import { Col, FormGroup } from "reactstrap";
 
 
-const SingleDatePicker = ({ startDate1, handleChange }:SingleDatePicker ) => {
+const SingleDatePicker = ({ startDate1, handleChange }:SingleDatePickerProp ) => {
   return (
     <Col xl="6">
       <div className="daterange-card">

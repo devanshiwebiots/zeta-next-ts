@@ -319,7 +319,7 @@ export interface BarChart2Type {
 export interface GoogleChartType {
   width?: string;
   height?: string;
-  chartType?: "PieChart" | "AreaChart" | "LineChart" | "BarChart" | "Bar";
+  chartType?: any;
   data: Array<Array<string | number | { role: string; sourceColumn?: number; type?: string; calc?: string }>>;
   option: {
     chart?: {

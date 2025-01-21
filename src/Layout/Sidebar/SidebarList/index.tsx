@@ -54,4 +54,3 @@ export const SidebarList = ({ handleActive, active, MENUITEMS, level, activeLink
   ));
 };
 
-//||  pathname.includes(item.items[0].type !=="sub" && item.items[0].path?.split("/")[level+1])

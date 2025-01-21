@@ -1,15 +1,22 @@
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import listPlugin from "@fullcalendar/list";
+import interactionPlugin from "@fullcalendar/interaction";
+import { EventsData } from "@/Data/Calendar";
 import CommonBreadcrumb from "@/CommonComponents/CommonBreadcrumb";
+import { Card, CardBody, Col, Container, Row } from "reactstrap";
 import CommonCardHeader from "@/CommonComponents/CommonCardHeader";
 import { BasicCalendars } from "@/Constant";
-import { EventsData } from "@/Data/Calendar";
-import moment from "moment";
-import { Calendar, View, Views, momentLocalizer } from "react-big-calendar";
-import { Card, CardBody, Col, Container, Row } from "reactstrap";
 
-type CalendarView = View;
 const BasicCalendar = () => {
-  const allViews: CalendarView[] = Object.values(Views) as CalendarView[];
-  const localizer = momentLocalizer(moment);
+  const calendarEvents = EventsData.map((event) => ({
+    id: event.id.toString(),
+    title: event.title,
+    start: event.start,
+    end: event.end,
+    allDay: event.allDay || false,
+  }));
 
   return (
     <>
@@ -20,7 +27,23 @@ const BasicCalendar = () => {
             <Card>
               <CommonCardHeader heading={BasicCalendars} />
               <CardBody>
-                <Calendar localizer={localizer} scrollToTime={new Date(1970, 1, 1, 6)} defaultDate={new Date(2023, 3, 12)} onSelectEvent={(event) => alert(event.title)} views={allViews} events={EventsData} selectable step={60} startAccessor="start" endAccessor="end" />
+                <FullCalendar
+                  plugins={[
+                    dayGridPlugin,
+                    timeGridPlugin,
+                    interactionPlugin,
+                    listPlugin,
+                  ]}
+                  initialView="dayGridMonth"
+                  headerToolbar={{
+                    left: "prev,next today",
+                    center: "title",
+                    right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+                  }}
+                  events={calendarEvents}
+                  selectable
+                  dateClick={(info) => alert(`Clicked on: ${info.dateStr}`)}
+                />
               </CardBody>
             </Card>
           </Col>

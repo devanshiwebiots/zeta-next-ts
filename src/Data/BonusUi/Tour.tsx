@@ -83,27 +83,27 @@ export const FriendsData = [`${ImagePath}/social-app/post-6.png`, `${ImagePath}/
 
 export const Steps = [
   {
-    selector: ".step1",
+    target: ".step1",
     content: "This is Profile image",
   },
   {
-    selector: ".step2",
+    target: ".step2",
     content: "Change Profile image here",
   },
   {
-    selector: ".step3",
+    target: ".step3",
     content: "This is your Social details",
   },
   {
-    selector: ".step4",
+    target: ".step4",
     content: "This is your Your detail",
   },
   {
-    selector: ".step5",
+    target: ".step5",
     content: "This is the your first Post",
   },
   {
-    selector: ".step6",
+    target: ".step6",
     content: "This is the your Last Post",
   },
 ];

@@ -398,7 +398,6 @@ export const SkillStatusChartOptions: ApexOptions = {
     },
   },
   colors: [primary, secondary],
-  //colors: ['#0db1d7', '#237895'],
   plotOptions: {
     radialBar: {
       inverseOrder: false,
@@ -814,7 +813,6 @@ export const ProductChartOptions: ApexOptions = {
     type: "line",
   },
   colors: [primary, secondary],
-  //colors: ['#06aed5', '#3494ae'],
   stroke: {
     curve: "smooth",
   },
@@ -837,7 +835,6 @@ export const ProductChartOptions: ApexOptions = {
   ],
   fill: {
     colors: [primary, secondary],
-    //colors: ['#06aed5', '#06aed5'],
     type: "gradient",
     gradient: {
       shade: "light",

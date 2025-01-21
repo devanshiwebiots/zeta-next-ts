@@ -10,22 +10,22 @@ const CustomDirectionNotify = () => {
     switch (toastname) {
       case "directionsSuccessToast":
         toast.success("Success Notification !", {
-          position: toast.POSITION.TOP_CENTER,
+          position: "top-center",
         });
         break;
       case "directionsInfoToast":
         toast.info("Info Notification !", {
-          position: toast.POSITION.BOTTOM_CENTER,
+          position: "bottom-center",
         });
         break;
       case "directionsWarningToast":
         toast.warn("Warning Notification !", {
-          position: toast.POSITION.BOTTOM_LEFT,
+          position: "bottom-left",
         });
         break;
       case "directionsDangerToast":
         toast.error("Danger Notification !", {
-          position: toast.POSITION.BOTTOM_RIGHT,
+          position: "bottom-right",
         });
         break;
       default:

@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction } from "react";
-//There is not Valid Type for Placement
 
 export interface CommonBreadcrumbProps {
   parent: string;

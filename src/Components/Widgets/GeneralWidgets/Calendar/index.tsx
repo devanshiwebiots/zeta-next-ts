@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import DatePicker from "react-datepicker";
 import { Card, CardBody, Col } from "reactstrap";
 
 const Calendar = () => {
   const [date, setDate] = useState<Date | null>(new Date());
   const [startDate, setStartDate] = useState(new Date());
-  const handleChange = (date: Date) => {
+  const handleChange = (date: SetStateAction<Date | null>) => {
     setDate(date);
   };
   return (

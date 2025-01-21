@@ -8,17 +8,18 @@ import ItemDescription from "./ItemDescription";
 import { useAppSelector } from "@/Redux/Hooks";
 
 const Invoice = () => {
-  
-  const componentRef = useRef<HTMLDivElement | null>(null);
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-  });
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
+  const handlePrint = useReactToPrint({ contentRef });
+
   return (
     <>
       <CommonBreadcrumb parent="ECommerce" pageTitle="Invoice" />
-      <ItemDescription ref={componentRef} />
+      <div ref={contentRef}>
+        <ItemDescription />
+      </div>
       <Col sm="12" className="text-center my-3">
-        <Button color="primary" className="me-2" onClick={handlePrint}>
+        <Button color="primary" className="me-2" onClick={() => handlePrint()}>
           {Print}
         </Button>
         <Link href={`/ecommerce/product`}>

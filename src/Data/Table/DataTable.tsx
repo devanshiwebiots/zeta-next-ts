@@ -900,7 +900,6 @@ export const StateSavingTableColumns = [
   },
   {
     name: "Position",
-    // selector: (row: stateSavingTableDataType) => <CustomBadge color={row.color} position={row.position} />,
     sortable: true,
     center: true,
   },
@@ -4462,12 +4461,6 @@ export const ajaxSourcedData = [
   },
 ];
 
-// export const ImgPath: string = "/assets/images";
-// const handlePDFClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-//   event.preventDefault();
-//   const pdfUrl = "/assets/pdf/sample.pdf"; // Replace with your actual PDF file name or path
-//   window.open(pdfUrl, "_blank");
-// };
 export const htmlColumnsTableData = [
   {
     id: 1,

@@ -354,7 +354,6 @@ export const ApexLineWithAnnotationCharts: ApexOptions = {
           size: 8,
           fillColor: "#fff",
           strokeColor: "red",
-          // radius: 2,
           cssClass: "apexcharts-custom-class",
         },
         label: {

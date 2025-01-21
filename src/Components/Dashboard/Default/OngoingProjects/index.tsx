@@ -1,4 +1,4 @@
-import { ImagePath } from "@/Constant";
+import { Href, ImagePath } from "@/Constant";
 import { OnGoingData, OngoingTableData } from "@/Data/Dashboard/Default";
 import { DashboardDropdown1 } from "@/Data/Dashboard/ECommerce";
 import Image from "next/image";
@@ -39,7 +39,7 @@ const OutgoingProject = () => {
                         </div>
                         <Media body className="ps-2">
                           <div className="avatar-details">
-                            <a href="">
+                            <a href={Href}>
                               <h6>{item.name}</h6>
                             </a>
                             <span>{item.team}</span>

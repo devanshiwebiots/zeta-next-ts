@@ -1,17 +1,17 @@
 import { CollegeName, DegreeLevel, Period, Specialization, YourEducation } from "@/Constant";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import DatePicker from "react-datepicker";
 import { Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
 
 const EducationDetails = () => {
   const [multiple, setMultiple] = useState(false);
-  const [startDate, setStartDate] = useState(new Date());
-  const [startDate1, setStartDate1] = useState(new Date());
-  const handleChange = (date: Date) => {
+  const [startDate, setStartDate] = useState<any>(new Date());
+  const [startDate1, setStartDate1] = useState<any>(new Date());
+  const handleChange = (date: SetStateAction<Date | null>) => {
     setStartDate(date);
   };
-  const handleChange1 = (date: Date) => {
+  const handleChange1 = (date: SetStateAction<Date | null>) => {
     setStartDate1(date);
   };
 

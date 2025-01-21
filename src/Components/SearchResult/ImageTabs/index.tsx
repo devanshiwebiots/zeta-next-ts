@@ -21,7 +21,7 @@ const ImagesTab = () => {
                         <Item original={`${ImagePath}/${item}`} width="800" height="600" caption="hello">
                           {({ ref, open }) => (
                             <a href={Href}>
-                              <Image style={{ cursor: "pointer" }} onClick={open} className="img-thumbnail" height={206} width={342} ref={ref as React.MutableRefObject<HTMLImageElement>} src={`${ImagePath}/${item}`} alt="thumbnail" />
+                              <Image style={{ cursor: "pointer" }} onClick={open} className="img-thumbnail" height={206} width={342} ref={ref as unknown as React.MutableRefObject<HTMLImageElement>} src={`${ImagePath}/${item}`} alt="thumbnail" />
                               <div className="caption mb-0">
                                 <h4>{PortfolioTitle}</h4>
                                 <p>{GalleryDescription}</p>

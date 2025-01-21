@@ -1,7 +1,7 @@
 import { Cancel, Print, PrintViews } from "@/Constant";
 import { propsTypes } from "@/Type/Contacts";
 import { useRef } from "react";
-import ReactToPrint from "react-to-print";
+import ReactToPrint, { useReactToPrint } from "react-to-print";
 import { Button, Modal, ModalBody } from "reactstrap";
 
 const PrintModal = ({ printModal, selectedUser, toggleCallback }: propsTypes) => {
@@ -9,7 +9,8 @@ const PrintModal = ({ printModal, selectedUser, toggleCallback }: propsTypes) =>
     toggleCallback(false);
   };
 
-  const componentRef = useRef();
+  const contentRef = useRef<HTMLDivElement | null>(null);
+  const handlePrint = useReactToPrint({contentRef});
   return (
     <Modal isOpen={printModal} toggle={printModalToggle}>
       <div className="modal-header">
@@ -17,15 +18,9 @@ const PrintModal = ({ printModal, selectedUser, toggleCallback }: propsTypes) =>
         <Button color="transprant" className="Button-close" onClick={printModalToggle} type="button"></Button>
       </div>
       <ModalBody className="list-persons">
-        {/* <Printpreview selectedUser={selectedUser} /> */}
-        <ReactToPrint
-          trigger={() => (
-            <Button color="secondary" className="me-1">
+            <Button color="secondary" className="me-1" onClick={()=>handlePrint()}>
               {Print}
-            </Button>
-          )}
-          content={() => componentRef?.current || null}
-        />
+            </Button>         
         &nbsp;&nbsp;
         <Button color="primary" onClick={printModalToggle}>
           {Cancel}

@@ -22,7 +22,7 @@ const GridGallery = () => {
                       <Col xl="3" md="4" sm="6" className="box-col-33">
                         <figure className="" key={i}>
                           <Item original={`${ImagePath}/${item}`} width="1024" height="768">
-                            {({ ref, open }) => <Image style={{ cursor: "pointer" }} onClick={open} height={200} width={324} className="img-thumbnail" ref={ref as React.MutableRefObject<HTMLImageElement>} src={`${ImagePath}/${item}`} alt="" />}
+                            {({ ref, open }) => <Image style={{ cursor: "pointer" }} onClick={open} height={200} width={324} className="img-thumbnail" ref={ref as unknown as React.MutableRefObject<HTMLImageElement>} src={`${ImagePath}/${item}`} alt="" />}
                           </Item>
                         </figure>
                       </Col>

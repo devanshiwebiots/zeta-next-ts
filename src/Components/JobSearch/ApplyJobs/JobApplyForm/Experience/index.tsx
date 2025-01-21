@@ -1,17 +1,17 @@
 import { CompanyName, Location, Period, Position, YourExperience } from "@/Constant";
-import { Fragment, useState } from "react";
+import { Fragment, SetStateAction, useState } from "react";
 import { Typeahead } from "react-bootstrap-typeahead";
 import DatePicker from "react-datepicker";
 import { Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
 
 const ExperienceDetails = () => {
   const [multiple, setMultiple] = useState(false);
-  const [startDate2, setStartDate2] = useState(new Date());
-  const [startDate3, setStartDate3] = useState(new Date());
-  const handleChange2 = (date: Date) => {
+  const [startDate2, setStartDate2] = useState<any>(new Date());
+  const [startDate3, setStartDate3] = useState<any>(new Date());
+  const handleChange2 = (date: SetStateAction<Date | null>) => {
     setStartDate2(date);
   };
-  const handleChange3 = (date: Date) => {
+  const handleChange3 = (date: SetStateAction<Date | null>) => {
     setStartDate3(date);
   };
 

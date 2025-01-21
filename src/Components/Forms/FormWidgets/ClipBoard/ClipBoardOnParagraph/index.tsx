@@ -2,11 +2,27 @@ import CommonCardHeader from "@/CommonComponents/CommonCardHeader";
 import { ClipboardOnParagraph } from "@/Constant";
 import { ClipBoardTextParagraph } from "@/Data/Forms/FormWidgets";
 import { useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
 import { Button, Card, CardBody, Col } from "reactstrap";
+import { toast } from "react-toastify";
 
 const ClipBoardParagraph = () => {
-  const [clipBoardValues, setClipBoardValues] = useState({ value: ClipBoardTextParagraph, copied: false });
+  const [clipBoardValues, setClipBoardValues] = useState({
+    value: ClipBoardTextParagraph,
+    copied: false,
+  });
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(clipBoardValues.value);
+      setClipBoardValues({ ...clipBoardValues, copied: true });
+
+      setTimeout(() => {
+        setClipBoardValues({ ...clipBoardValues, copied: false });
+      }, 2000);
+    } catch (err) {
+      toast.error("Failed to copy text: " + err);
+    }
+  };
 
   return (
     <Col sm="12" md="6">
@@ -15,15 +31,20 @@ const ClipBoardParagraph = () => {
         <CardBody>
           <div className="clipboaard-container">
             <p className="card-description">Copy from paragraph</p>
-            <CopyToClipboard text={clipBoardValues.value} onCopy={(value) => setClipBoardValues({ value, copied: true })}>
-              <h6 className="border rounded card-body f-w-300">{ClipBoardTextParagraph}</h6>
-            </CopyToClipboard>
+            <h6 className="border rounded card-body f-w-300">
+              {ClipBoardTextParagraph}
+            </h6>
             <div className="mt-3">
-              <CopyToClipboard text={clipBoardValues.value} onCopy={(value) => setClipBoardValues({ value, copied: true })}>
-                <Button className="btn-clipboard" color="primary">
-                  <i className="fa fa-copy"></i> Copy
-                </Button>
-              </CopyToClipboard>
+              <Button
+                className="btn-clipboard"
+                color="primary"
+                onClick={handleCopy}
+              >
+                <i className="fa fa-copy"></i> Copy
+              </Button>
+              {clipBoardValues.copied && (
+                <span className="ms-2 text-success">Copied!</span>
+              )}
             </div>
           </div>
         </CardBody>

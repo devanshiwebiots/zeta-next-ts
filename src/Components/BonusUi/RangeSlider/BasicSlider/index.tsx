@@ -41,15 +41,6 @@ const BasicSliders = () => {
                         </div>
                       );
                     }}
-                    // renderThumb={({ props, isDragged }) => {
-                    //   const { key, ...otherProps } = props; // Destructure key from props
-
-                    //   return (
-                    //     <div key={key} {...otherProps} style={{ ...otherProps.style, height: "35px", width: "35px", borderRadius: "30px", backgroundColor: "#FFF", display: "flex", justifyContent: "center", alignItems: "center", boxShadow: "0px 2px 6px #AAA" }}>
-                    //       <div style={{ height: "16px", width: "5px", backgroundColor: isDragged ? "#4d8aff" : "#CCC" }} />
-                    //     </div>
-                    //   );
-                    // }}
                   />
                   <output style={{ marginTop: "12px" }} id='output'>
                     {values1[0]}

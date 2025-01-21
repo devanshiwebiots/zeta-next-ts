@@ -1,15 +1,15 @@
 import { CreateProjectDateProps } from "@/Type/Projects";
-import { Fragment, useState } from "react";
+import { Fragment, SetStateAction, useState } from "react";
 import DatePicker from "react-datepicker";
 import { FormGroup, Label } from "reactstrap";
 
 const Dates = ({ StartingDate, EndingDate }: CreateProjectDateProps) => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-  const handleStartDate = (date: Date) => {
+  const [startDate, setStartDate] = useState<any>(new Date());
+  const [endDate, setEndDate] = useState<any>(new Date());
+  const handleStartDate = (date: SetStateAction<Date | null>) => {
     setStartDate(date);
   };
-  const handleEndDate = (date: Date) => {
+  const handleEndDate = (date: SetStateAction<Date | null>) => {
     setEndDate(date);
   };
   return (
