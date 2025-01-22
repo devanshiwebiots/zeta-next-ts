@@ -234,37 +234,31 @@ export const productColumns = [
     name: "Image",
     selector: (row) => row.image,
     sortable: true,
-    center: true,
   },
   {
     name: "Details",
     selector: (row) => row.Details,
     sortable: true,
-    center: true,
     wrap: true,
   },
   {
     name: "Amount",
     selector: (row) => row.amount,
     sortable: true,
-    center: true,
   },
   {
     name: "Stock",
     selector: (row) => row.stock,
     sortable: true,
-    center: true,
   },
   {
     name: "Start_date",
     selector: (row) => row.start_date,
     sortable: true,
-    center: true,
   },
   {
     name: "Action",
     selector: (row) => row.action,
     sortable: true,
-    center: true,
   },
 ];

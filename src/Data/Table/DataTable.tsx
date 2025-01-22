@@ -190,43 +190,36 @@ export const ZeroConfigurationTableColumns: TableColumn<zeroConfigurationTableCo
     name: "Name",
     selector: (row) => row["name"],
     sortable: true,
-    center: false,
   },
   {
     name: "Position",
     selector: (row) => `${row.position}`,
     sortable: true,
-    center: true,
   },
   {
     name: "Office",
     selector: (row) => `${row.office}`,
     sortable: true,
-    center: true,
   },
   {
     name: "Age",
     selector: (row) => `${row.age}`,
     sortable: true,
-    center: true,
   },
   {
     name: "Start Date",
     selector: (row) => row["startDate"],
     sortable: true,
-    center: true,
   },
   {
     name: "Salary",
     selector: (row) => `${row.salary}`,
     sortable: true,
-    center: true,
   },
   {
     name: "Action",
     selector: (row) => row["action"],
     sortable: true,
-    center: true,
   },
 ];
 
@@ -235,26 +228,22 @@ export const childRowsTableColumns = [
     name: "Name",
     selector: (row: zeroConfigurationTableColumnsType) => row["name"],
     sortable: true,
-    center: false,
   },
   {
     name: "Position",
     selector: (row: zeroConfigurationTableColumnsType) => `${row.position}`,
     sortable: true,
-    center: true,
   },
   {
     name: "Office",
     selector: (row: zeroConfigurationTableColumnsType) => `${row.office}`,
     sortable: true,
-    center: true,
   },
 
   {
     name: "Salary",
     selector: (row: zeroConfigurationTableColumnsType) => `${row.salary}`,
     sortable: true,
-    center: true,
   },
 ];
 export const StateSavingTableData = [
@@ -896,42 +885,39 @@ export const StateSavingTableColumns = [
     name: "Name",
     selector: (row: stateSavingTableDataType) => row["name"],
     sortable: true,
-    center: false,
   },
   {
     name: "Position",
     sortable: true,
-    center: true,
   },
   {
     name: "Office",
     selector: (row: stateSavingTableDataType) => `${row.office}`,
     sortable: true,
-    center: true,
   },
   {
     name: "Age",
     selector: (row: stateSavingTableDataType) => `${row.age}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Start Date",
     selector: (row: stateSavingTableDataType) => row["startDate"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Salary",
     selector: (row: stateSavingTableDataType) => `${row.salary}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "action",
     selector: (row: stateSavingTableDataType) => row["action"],
     sortable: true,
-    center: true,
+    
   },
 ];
 
@@ -1703,43 +1689,43 @@ export const ScrollVerticalDynamicHeightColumns = [
     name: "Name",
     selector: (row: scrollVerticalType) => row["name"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Position",
     selector: (row: scrollVerticalType) => `${row.position}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Office",
     selector: (row: scrollVerticalType) => `${row.office}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Age",
     selector: (row: scrollVerticalType) => `${row.age}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Start Date",
     selector: (row: scrollVerticalType) => row["startDate"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Salary",
     selector: (row: scrollVerticalType) => `${row.salary}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "action",
     selector: (row: scrollVerticalType) => row["action"],
     sortable: true,
-    center: true,
+    
   },
 ];
 
@@ -2080,31 +2066,31 @@ export const StockResultTableColumns = [
     name: "Name",
     selector: (row: stockResultTableData) => row["name"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Symbol",
     selector: (row: stockResultTableData) => `${row.symbol}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Price",
     selector: (row: stockResultTableData) => `${row.price}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Difference",
     cell: (row: stockResultTableData) => row.difference,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Last",
     cell: (row: stockResultTableData) => row.last,
     sortable: true,
-    center: true,
+    
   },
 ];
 
@@ -2296,37 +2282,37 @@ export const RowCreateCallBackTableColumns = [
     name: "Name",
     selector: (row: rowCreateCallBackData) => `${row.name}`,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Symbol",
     selector: (row: rowCreateCallBackData) => `${row.email}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Price",
     selector: (row: rowCreateCallBackData) => `${row.experience}`,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Sex",
     cell: (row: rowCreateCallBackData) => row.sex,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Contact Number",
     cell: (row: rowCreateCallBackData) => row.contactNumber,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Salary",
     cell: (row: rowCreateCallBackData) => <CustomCell value={row.salary} position={""} color={""} />,
     sortable: true,
-    center: true,
+    
   },
 ];
 
@@ -2377,31 +2363,31 @@ export const AddRowsTableColumns = [
     name: "Column1",
     selector: (row: addRowsTable) => row.column1,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Column2",
     selector: (row: addRowsTable) => row.column2,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Column3",
     selector: (row: addRowsTable) => row.column3,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Column4",
     cell: (row: addRowsTable) => row.column4,
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Column5",
     cell: (row: addRowsTable) => row.column5,
     sortable: true,
-    center: true,
+    
   },
 ];
 
@@ -3073,43 +3059,43 @@ export const DeleteDataTableColumns = [
     name: "Employee Name",
     selector: (row: deleteRowData) => row["name"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Job Designation",
     selector: (row: deleteRowData) => row["job"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Company Name",
     selector: (row: deleteRowData) => row["companyName"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Credit/Debit",
     selector: (row: deleteRowData) => row["credit"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Date",
     selector: (row: deleteRowData) => row["date"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Priority",
     selector: (row: deleteRowData) => row["priority"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Budget",
     selector: (row: deleteRowData) => row["budget"],
     sortable: true,
-    center: false,
+    
   },
 ];
 
@@ -3863,37 +3849,37 @@ export const FilterDataTableColumns = [
     name: "Employee Name",
     selector: (row: FilterData) => row["name"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "position",
     selector: (row: FilterData) => row["position"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "office",
     selector: (row: FilterData) => row["office"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "age",
     selector: (row: FilterData) => row["age"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Start Date",
     selector: (row: FilterData) => row["startDate"],
     sortable: true,
-    center: false,
+    
   },
   {
     name: "salary",
     selector: (row: FilterData) => row["salary"],
     sortable: true,
-    center: false,
+    
   },
 ];
 
@@ -3927,38 +3913,38 @@ export const htmlColumns = [
     name: "Name",
     selector: (row: htmlColumnsInterface) => row.name,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Position",
     selector: (row: htmlColumnsInterface) => row.position,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Salary",
     selector: (row: htmlColumnsInterface) => row.salary,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Office",
     selector: (row: htmlColumnsInterface) => row.office,
     sortable: true,
-    center: false,
+    
   },
 
   {
     name: "Status",
     selector: (row: htmlColumnsInterface) => <CustomBadge color={row.color} position={row.badge} value={0} />,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Email",
     selector: (row: htmlColumnsInterface) => row.email,
     sortable: true,
-    center: false,
+    
   },
 ];
 
@@ -3967,37 +3953,37 @@ export const ajaxSourcedColumns = [
     name: "Name",
     selector: (row: ajaxSourcedColumnsInterface) => row.name,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Position",
     selector: (row: ajaxSourcedColumnsInterface) => row.position,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Office",
     selector: (row: ajaxSourcedColumnsInterface) => row.office,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Extn.",
     selector: (row: ajaxSourcedColumnsInterface) => row.extends,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Start Date",
     selector: (row: ajaxSourcedColumnsInterface) => row.date,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Salary",
     selector: (row: ajaxSourcedColumnsInterface) => row.salary,
     sortable: true,
-    center: false,
+    
   },
 ];
 
@@ -5386,37 +5372,37 @@ export const serverSideProcessingColumns = [
     name: "First Name",
     selector: (row: serverSideProcessingColumnsInterface) => row.name,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Last Name",
     selector: (row: serverSideProcessingColumnsInterface) => row.lastName,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "position",
     selector: (row: serverSideProcessingColumnsInterface) => row.position,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "office",
     selector: (row: serverSideProcessingColumnsInterface) => row.office,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Start Date",
     selector: (row: serverSideProcessingColumnsInterface) => row.date,
     sortable: true,
-    center: false,
+    
   },
   {
     name: "Salary",
     selector: (row: serverSideProcessingColumnsInterface) => row.salary,
     sortable: true,
-    center: false,
+    
   },
 ];
 

@@ -53,43 +53,43 @@ export const SupportTicketColumns = [
     name: "Image",
     selector: (row: SupportTicketDataTypes) => row["image"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Position",
     selector: (row: SupportTicketDataTypes) => row["position"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Salary",
     selector: (row: SupportTicketDataTypes) => row["salary"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Office",
     selector: (row: SupportTicketDataTypes) => row["office"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Skill",
     selector: (row: SupportTicketDataTypes) => row["skill"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Extn",
     selector: (row: SupportTicketDataTypes) => row["extn"],
     sortable: true,
-    center: true,
+    
   },
   {
     name: "Email",
     selector: (row: SupportTicketDataTypes) => row["email"],
     sortable: true,
-    center: true,
+    
   },
 ];
 
