@@ -9,6 +9,11 @@
 -----------------------------------------------------------------------------------
  */
 // *** utils ***
+
+@use "sass:color";
+@use "sass:list";
+@use "sass:math";
+
 :root {
   --theme-default: #6362e7;
   --theme-secondary: #ffc500;
